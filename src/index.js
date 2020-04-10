@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {provider} from 'react-redux';
+import {Provider} from 'react-redux';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 import { createStore } from "redux";
-
+import { reducer } from './reducers/index'
 const store = createStore(reducer)
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-<provider store={store}>
+<Provider store={store}>
   <App />  
-</provider>
+</Provider>
 , rootElement);
